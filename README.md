@@ -22,7 +22,7 @@ compiler version:
 	gcc version 5.4.0 20160609 (Ubuntu 5.4.0-6ubuntu1~16.04.4) 
 
 
-For compling just type:
+For compling just type in bash:
 
 	make
 	
@@ -36,7 +36,7 @@ The output of the program is the sum of distance for each cycle. For 1, 5, 10, 1
 
 Program will generate a ring topology.
 
-Type
+Type in bash
 	
 	./TMAN N k D n r1 r2 r3 r4 .....
 
@@ -46,7 +46,7 @@ N, the total number of nodes in the network, k, the number of neighbors each nod
 
 Program will generate a binary tree topology.
 
-Type
+Type in bash:
 
 	./TMAN N K B
 	
@@ -56,7 +56,7 @@ N, the total number of nodes in the network, k, the number of neighbors each nod
 
 Program will generate a crescent moon topology.
 
-Type
+Type in bash:
 
 	./TMAN N K C
 
@@ -73,6 +73,23 @@ Node graph of cycle 50:
 ![dynamic ring](D_N1000_k30_50.bmp)
 
 
+Type in bash:
+
+	./TMAN 100 3 B
+	
+Node graph of cycle 50:
+
+![binary tree](B_N100_k3_50.bmp)
+
+
+Type in bash:
+
+	./TMAN 1000 30 C
+	
+Node graph of cycle 50:
+
+![crescent moon](C_N1000_k30_50.bmp)
+
 
 # Structure
 There are mainly 3 parts in this program.
@@ -81,8 +98,13 @@ TMAN.cpp:
 
 Main fuctions for this program. It reads arguments and constructs Topology class instance. It will conduct different operations accroding to differentinput arguments.
 
+
 Topology.cpp & TOpology.hpp:
-	Defination and declarition of Topology class.
+	
+Defination and declarition of Topology class.
+
 
 EasyBMP:
-	It's a portable bmp image processing library. I use it in Topology.cpp to generate bmp file.
+	
+	
+It's a portable bmp image processing library. I use it in Topology.cpp to generate bmp file.
