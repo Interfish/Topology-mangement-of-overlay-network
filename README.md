@@ -1,7 +1,7 @@
 
 # Description
 
-This is a implemeentaion of T-MAN protocal. It's also the solution for assignment 1 of EEL6935 Distributed Computing, University of Florida, spring 2017.
+This is a implementaion of T-MAN protocal. It's also the solution for assignment 1 of EEL6935 Distributed Computing, University of Florida, spring 2017.
 
 >Overlay topology plays an important role in P2P systems. Topology serves as a basis for achieving functions such as routing, searching and information dissemination, and it has a major impact on their efﬁciency, cost and robustness. Furthermore, the solution to problems such as sorting and clustering of nodes can also be interpreted as a topology. In this paper we propose a generic protocol, T-Man, for constructing and maintaining a large class of topologies. In the proposed framework, a topology is deﬁned with the help of a ranking function. The nodes participating in the protocol can use this ranking function to order any set of other nodes according to preference for choosing them as a neighbor. This simple abstraction makes it possible to control the self-organization process of topologies in a straightforward, intuitive and ﬂexible manner. At the same time, the T-Man protocol involves only local communication to increase the quality of the current set of neighbors of each node. We show that this bottom-up approach results in fast convergence and high robustness in dynamic environments. The protocol can be applied as a standalone solution as well as a component for recovery or bootstrapping of other protocols.
 
@@ -30,7 +30,7 @@ For compling just type:
 
 In this algorithm, every node in the network maintains a list of neighbors. During the network-initialization phase, each node randomly selects k neighbors and places them into its neighbor list. During the networkevolution phase, in each cycle of the iterative algorithm, every node randomly selects one of its neighbors, and then sends a list consisting of the identifiers of its neighbors and of itself to that neighbor. The selected neighbor also sends its neighbors list back to the node which initiated the action. Upon receiving the new neighbor list, the nodes select the nearest k nodes from both the new and old lists as their neighbors and discards all the others.
 
-The output of the program is the sum of distance for each cycle. For 1, 5, 10 and 15 cycles the program produces the node graph files in bitmap and a file that contains the neighbor list for each node.
+The output of the program is the sum of distance for each cycle. For 1, 5, 10, 15 and 50 cycles the program produces the node graph files in bitmap and a file that contains the neighbor list for each node.
 
 ## Dynamic Ring
 
@@ -64,6 +64,13 @@ N, the total number of nodes in the network, k, the number of neighbors each nod
 
 # Examples
 
+Type 
+
+	./TMAN 1000 30 D 5 1 4 5 8 10
+	
+Node graph of cycle 50:
+
+![dynamic ring](D_N1000_k30_50.bmp)
 
 
 
