@@ -99,7 +99,7 @@ TMAN.cpp:
 Main fuctions for this program. It reads arguments and constructs Topology class instance. It will conduct different operations accroding to differentinput arguments.
 
 
-Topology.cpp & TOpology.hpp:
+Topology.cpp & Topology.hpp:
 	
 Defination and declarition of Topology class.
 
